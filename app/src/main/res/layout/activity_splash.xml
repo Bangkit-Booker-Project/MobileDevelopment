@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashScreen.SplashActivity">
+
+    <ImageView
+        android:id="@+id/booker_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="13dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ellipse_1"
+        app:layout_constraintBottom_toTopOf="@+id/booker_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.capstonesean.splashScreen.LinearColor
+        android:id="@+id/booker_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="299dp"
+        android:fontFamily="@font/inter_black"
+        android:textColor="@color/light_green"
+        android:text="@string/booker"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/booker_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

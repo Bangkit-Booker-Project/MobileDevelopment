@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Booker</string>
+    <string name="logo">Booker Logo</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="booker">Booker</string>
+    <string name="username_empty">Username is empty</string>
+    <string name="insert_username">Username</string>
+    <string name="insert_username">Username</string>
+</resources>
