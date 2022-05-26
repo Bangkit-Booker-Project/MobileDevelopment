@@ -53,5 +53,4 @@ class MyUsernameText : AppCompatEditText, View.OnTouchListener {
 
         })
     }
-} {
 }
