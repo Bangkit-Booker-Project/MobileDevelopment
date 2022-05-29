@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneSean">
         <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookLayoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".profilepage.ProfilePageActivity"
             android:exported="false" />
         <activity

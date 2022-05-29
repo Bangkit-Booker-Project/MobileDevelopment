@@ -5,5 +5,18 @@
     <string name="booker">Booker</string>
     <string name="username_empty">Username is empty</string>
     <string name="insert_username">Username</string>
-    <string name="insert_username">Username</string>
+    <string name="your_vote">Your vote / 5.0</string>
+    <string name="book_author">Book Author</string>
+    <string name="book_title">Book Title</string>
+    <string name="book_rating">4.7/5.0</string>
+    <string name="rate_this_book">Rate This Book!</string>
+    <string name="book_desciption">Book Desciption</string>
+    <string name="genre">Genre</string>
+    <string name="book_genre">Book Genre</string>
+    <string name="page">Page</string>
+    <string name="book_page">Book Page</string>
+    <string name="similar_books">Similar Books</string>
+    <string name="description">Description</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="get_this_book">Get This Book!</string>
 </resources>
