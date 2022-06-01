@@ -12,7 +12,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.example.capstonesean.R
 
-class MyUsernameText : AppCompatEditText, View.OnTouchListener {
+open class MyUsernameText : AppCompatEditText, View.OnTouchListener {
     constructor(context: Context) : super(context) {
         init()
     }
@@ -36,7 +36,7 @@ class MyUsernameText : AppCompatEditText, View.OnTouchListener {
     }
 
     private fun init() {
-        border = ContextCompat.getDrawable(context, R.drawable.border_bg) as Drawable
+        border = ContextCompat.getDrawable(context, R.drawable.register_border) as Drawable
         setOnTouchListener(this)
         addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {

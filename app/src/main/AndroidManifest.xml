@@ -10,13 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneSean">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".splashScreen.SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".BookLayoutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".profilepage.ProfilePageActivity"
+            android:name=".login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".signUp.SignUpActivity"
@@ -25,8 +22,13 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".splashScreen.SplashActivity"
-            android:exported="true">
+            android:name=".genrePick.GenrePickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".homePage.HomepageActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.CapstoneSean.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
