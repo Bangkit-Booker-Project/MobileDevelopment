@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneSean">
         <activity
-            android:name=".splashScreen.SplashActivity"
-            android:exported="false" />
+            android:name=".homePage.HomepageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.CapstoneSean.NoActionBar"/>
+
         <activity
             android:name=".login.LoginActivity"
             android:exported="false" />
@@ -24,11 +27,10 @@
         <activity
             android:name=".genrePick.GenrePickActivity"
             android:exported="false" />
-        <activity
-            android:name=".homePage.HomepageActivity"
-            android:exported="true"
-            android:label="@string/title_activity_homepage"
-            android:theme="@style/Theme.CapstoneSean.NoActionBar">
+            <activity
+                android:name=".splashScreen.SplashActivity"
+                android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

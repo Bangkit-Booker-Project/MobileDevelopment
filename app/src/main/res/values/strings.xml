@@ -52,9 +52,12 @@
     <string name="search">Search</string>
     <string name="menu">Menu</string>
     <string-array name="newest">
-    <item>Newest</item>
-    <item>Oldest</item>
-    <item>High Rated</item>
-    <item>Low Rated</item>
+        <item>Newest</item>
+        <item>Oldest</item>
+        <item>High Rated</item>
+        <item>Low Rated</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_result">No Results</string>
 </resources>

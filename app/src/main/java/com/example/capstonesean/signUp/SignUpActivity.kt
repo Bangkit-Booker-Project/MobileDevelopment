@@ -1,10 +1,13 @@
 package com.example.capstonesean.signUp
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.view.Window
 import com.example.capstonesean.R
 import com.example.capstonesean.databinding.ActivityRegisterBinding
@@ -19,6 +22,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        playAnimation()
 
         setMyButtonEnable()
         binding.loginText.setOnClickListener {
@@ -72,6 +76,28 @@ class SignUpActivity : AppCompatActivity() {
 
         })
     }
+
+    private fun playAnimation() {
+        val signup = ObjectAnimator.ofFloat(binding.signUp, View.ALPHA, 1f).setDuration(1000)
+        val logo = ObjectAnimator.ofFloat(binding.bookerLogo, View.ALPHA, 1f).setDuration(1000)
+        val appname = ObjectAnimator.ofFloat(binding.bookerText, View.ALPHA, 1f).setDuration(1000)
+        val username = ObjectAnimator.ofFloat(binding.usernameText, View.ALPHA, 1f).setDuration(1000)
+        val email = ObjectAnimator.ofFloat(binding.emailText, View.ALPHA, 1f).setDuration(1000)
+        val password = ObjectAnimator.ofFloat(binding.passwordText, View.ALPHA, 1f).setDuration(1000)
+        val haveacc = ObjectAnimator.ofFloat(binding.haveAccount, View.ALPHA, 1f).setDuration(1000)
+        val logintext = ObjectAnimator.ofFloat(binding.loginText, View.ALPHA, 1f).setDuration(1000)
+        val signbutton = ObjectAnimator.ofFloat(binding.signUpButton, View.ALPHA, 1f).setDuration(1000)
+
+        val together = AnimatorSet().apply {
+            playTogether(username, email, password)
+        }
+
+        AnimatorSet().apply {
+            playSequentially(signup, logo, appname, together, haveacc, logintext, signbutton)
+            start()
+        }
+    }
+
 
     private fun setMyButtonEnable() {
         val usernameResult = binding.usernameText.text

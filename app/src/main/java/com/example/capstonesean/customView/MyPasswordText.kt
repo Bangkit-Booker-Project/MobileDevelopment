@@ -82,12 +82,12 @@ class MyPasswordText: MyUsernameText {
 
     private fun hidePassword(isHide: Boolean) {
         if (isHide) {
-            eyeImage = ContextCompat.getDrawable(context, R.drawable.ic_eye_nonactive) as Drawable
+            eyeImage = ContextCompat.getDrawable(context, R.drawable.ic_baseline_visibility_off_24) as Drawable
             setTextColor(ContextCompat.getColor(context, R.color.black))
             transformationMethod = PasswordTransformationMethod.getInstance()
         } else {
-            eyeImage = ContextCompat.getDrawable(context, R.drawable.ic_eye_active) as Drawable
-            setTextColor(ContextCompat.getColor(context, R.color.light_green))
+            eyeImage = ContextCompat.getDrawable(context, R.drawable.ic_eye_nonactive) as Drawable
+            setTextColor(ContextCompat.getColor(context, R.color.black))
             transformationMethod = HideReturnsTransformationMethod.getInstance()
         }
     }
