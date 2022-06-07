@@ -51,6 +51,16 @@
     <string name="user">User</string>
     <string name="search">Search</string>
     <string name="menu">Menu</string>
+    <string name="rate_this_book">Rate This Book!</string>
+    <string name="your_vote">Vote</string>
+    <string name="get_this_book">Get This Book!</string>
+    <string name="description">Description</string>
+    <string name="book_desciption">Book Description</string>
+    <string name="book_genre">Book Genre</string>
+    <string name="page">Page</string>
+    <string name="book_page">Book Page</string>
+    <string name="similar_books">Similar Books</string>
+    <string name="dark_mode">Dark Mode</string>
     <string-array name="newest">
         <item>Newest</item>
         <item>Oldest</item>
@@ -60,4 +70,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="no_result">No Results</string>
+    <string name="copyright">\@2022 Booker</string>
 </resources>

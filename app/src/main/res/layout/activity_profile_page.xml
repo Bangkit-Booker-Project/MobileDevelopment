@@ -7,24 +7,54 @@
     android:layout_height="match_parent"
     tools:context=".profilepage.ProfilePageActivity">
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="307dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="40dp"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.CapstoneSean.AppBarOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="@string/booker"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/green_secondary"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/setting_button"
+        android:layout_width="307dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mybooks_button"
         app:srcCompat="@drawable/green_secondary" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/logout_button"
         android:layout_width="307dp"
         android:layout_height="62dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/setting_button"
         app:srcCompat="@drawable/green_secondary" />
 
     <ImageView
@@ -32,9 +62,9 @@
         android:layout_width="45dp"
         android:layout_height="37dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
+        app:layout_constraintStart_toStartOf="@+id/mybooks_button"
+        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
         app:layout_constraintVertical_bias="0.48"
         app:srcCompat="@drawable/ic_baseline_book" />
 
@@ -45,9 +75,9 @@
         android:layout_marginStart="12dp"
         android:text="My Books"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
         app:layout_constraintVertical_bias="0.488" />
 
     <ImageView
@@ -55,9 +85,9 @@
         android:layout_width="45dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
+        app:layout_constraintStart_toStartOf="@+id/mybooks_button"
+        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_book" />
 
@@ -68,30 +98,21 @@
         android:layout_marginStart="16dp"
         android:text="My Books"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/iv_background"
-        android:layout_width="match_parent"
-        android:layout_height="246dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/linear_color" />
-
-    <ImageView
         android:id="@+id/iv_profile_pic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="160dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/sample_avatar" />
 
     <TextView
         android:id="@+id/tv_username"
@@ -109,7 +130,7 @@
         android:id="@+id/tv_user_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="user@gmal.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -117,10 +138,10 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/mybooks_button"
         android:layout_width="307dp"
         android:layout_height="62dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_user_email"
@@ -131,9 +152,9 @@
         android:layout_width="45dp"
         android:layout_height="37dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
+        app:layout_constraintStart_toStartOf="@+id/mybooks_button"
+        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
         app:layout_constraintVertical_bias="0.48"
         app:srcCompat="@drawable/ic_baseline_book" />
 
@@ -144,9 +165,9 @@
         android:layout_marginStart="12dp"
         android:text="My Books"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
         app:layout_constraintVertical_bias="0.488" />
 
     <TextView
@@ -156,9 +177,9 @@
         android:layout_marginStart="16dp"
         android:text="Setting"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_button"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toTopOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/setting_button"
         app:layout_constraintVertical_bias="0.534" />
 
     <ImageView
@@ -166,9 +187,9 @@
         android:layout_width="45dp"
         android:layout_height="37dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
-        app:layout_constraintStart_toStartOf="@+id/imageView11"
-        app:layout_constraintTop_toTopOf="@+id/imageView11"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_button"
         app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/ic_baseline_settings" />
 
@@ -177,9 +198,9 @@
         android:layout_width="45dp"
         android:layout_height="37dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/logout_button"
+        app:layout_constraintStart_toStartOf="@+id/logout_button"
+        app:layout_constraintTop_toTopOf="@+id/logout_button"
         app:layout_constraintVertical_bias="0.44"
         app:srcCompat="@drawable/ic_baseline_logout" />
 
@@ -190,8 +211,8 @@
         android:layout_marginStart="16dp"
         android:text="Log Out"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/logout_button"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/logout_button"
         app:layout_constraintVertical_bias="0.488" />
 </androidx.constraintlayout.widget.ConstraintLayout>
