@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.createstory.CreateStoryActivity">
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/image_placeholder"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <com.yusril.storyapp.ui.customview.MyEditText
+        android:id="@+id/input_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:lines="3"
+        android:maxLines="5"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:hint="@string/input_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_preview"/>
+
+    <Button
+        android:id="@+id/button_camera"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ic_camera"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/button_gallery"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ic_image"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@id/button_camera"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.yusril.storyapp.ui.customview.MyButton
+        android:id="@+id/button_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:elevation="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/button_post"
+        app:layout_constraintTop_toTopOf="@id/button_post"
+        app:layout_constraintRight_toRightOf="@id/button_post"
+        app:layout_constraintBottom_toBottomOf="@id/button_post"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

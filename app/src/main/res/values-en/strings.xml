@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Story App</string>
+    <string name="from">from</string>
+    <string name="dev_name">Yusril</string>
+    <string name="on_boarding_title_1">Share Your Story</string>
+    <string name="on_boarding_description_1">Spread the joy through the stories you share</string>
+    <string name="start_now">Start Now</string>
+    <string name="on_boarding_title_2">Easy to use</string>
+    <string name="on_boarding_description_2">Equipped with a feature to upload stories and view previous stories</string>
+    <string name="on_boarding_title_3">Browse In Multiple Languages</string>
+    <string name="on_boarding_description_3">Available in Indonesian and English</string>
+    <string name="greeting">Hello, good evening!</string>
+    <string name="welcome">Welcome to Story App</string>
+    <string name="input_name">Enter name</string>
+    <string name="input_password">Enter password</string>
+    <string name="password_error">Password must be more than 5 letters</string>
+    <string name="email_error">Enter a valid email</string>
+    <string name="input_email">Enter email</string>
+    <string name="login">Login</string>
+    <string name="have_no_account">Don\'t have an account yet?</string>
+    <string name="register">Create Account</string>
+    <string name="have_an_account">Already have an account?</string>
+    <string name="empty_field">This field is required</string>
+    <string name="logout">Logout</string>
+    <string name="date">13 hours ago</string>
+    <string name="logout_dialog_title">Logout from Story App?</string>
+    <string name="logout_yes">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="description">Description</string>
+    <string name="post">Post</string>
+    <string name="input_description">Enter description</string>
+    <string name="create_story_title">Add Story</string>
+    <string name="choose_picture">Choose image</string>
+    <string name="upload_story_null">Please enter the image file and description first</string>
+    <string name="retry">Try Again</string>
+</resources>
