@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".booklayout.BookLayoutActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shimmer_book_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="288dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/linear_color" />
+
+        <ImageView
+            android:id="@+id/iv_book_image"
+            android:layout_width="126dp"
+            android:layout_height="174dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/light_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.192"
+            app:srcCompat="@drawable/ic_baseline_book" />
+
+        <TextView
+            android:id="@+id/tv_book_author"
+            android:layout_width="249dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="4dp"
+            android:gravity="center_horizontal"
+            android:textSize="24sp"
+            android:background="@color/light_grey"
+            app:layout_constraintStart_toEndOf="@+id/iv_book_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_title" />
+
+        <TextView
+            android:id="@+id/tv_book_title"
+            android:layout_width="249dp"
+            android:layout_height="98dp"
+            android:layout_marginStart="4dp"
+            android:gravity="center_horizontal"
+            android:background="@color/light_grey"
+            android:textSize="34sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_book_image"
+            app:layout_constraintTop_toTopOf="@+id/iv_book_image" />
+
+        <TextView
+            android:id="@+id/tv_book_rating"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@+id/iv_book_image"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="@+id/iv_book_image"
+            app:layout_constraintTop_toBottomOf="@+id/iv_book_image" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_book_rating"
+            app:layout_constraintEnd_toStartOf="@+id/tv_book_rating"
+            app:layout_constraintTop_toTopOf="@+id/tv_book_rating"
+            app:srcCompat="@drawable/ic_baseline_star" />
+
+        <TextView
+            android:id="@+id/tv_rate_this_book"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_book_rating"
+            app:layout_constraintStart_toStartOf="@+id/tv_book_author"
+            app:layout_constraintTop_toTopOf="@+id/tv_book_rating" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_user_vote"
+            android:layout_width="99dp"
+            android:layout_height="20dp"
+            android:background="@color/light_grey"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_rate_this_book"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rate_this_book">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_user_vote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_vote"
+                android:background="@color/light_grey"
+                android:textColorHint="#616161"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_book_link"
+            android:layout_width="187dp"
+            android:layout_height="53dp"
+            android:background="@color/light_grey"
+            android:layout_marginTop="32dp"
+            android:text="@string/get_this_book"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_page" />
+
+        <TextView
+            android:id="@+id/tv_text_description"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@color/light_grey"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/tv_book_desciption"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/light_grey"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_text_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_description" />
+
+        <TextView
+            android:id="@+id/tv_text_genre"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/light_grey"
+            app:layout_constraintStart_toStartOf="@+id/tv_text_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_desciption" />
+
+        <TextView
+            android:id="@+id/tv_book_genre"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            app:layout_constraintStart_toStartOf="@+id/tv_text_genre"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_genre" />
+
+        <TextView
+            android:id="@+id/tv_text_page"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/light_grey"
+            app:layout_constraintStart_toStartOf="@+id/tv_text_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_genre" />
+
+        <TextView
+            android:id="@+id/tv_book_page"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            app:layout_constraintStart_toStartOf="@+id/tv_text_page"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_page" />
+
+        <TextView
+            android:id="@+id/tv_text_similar_books"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/light_grey"
+            app:layout_constraintStart_toStartOf="@+id/tv_text_page"
+            app:layout_constraintTop_toBottomOf="@+id/button_book_link" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_book_list_horizontal"
+            android:layout_width="414dp"
+            android:layout_height="180dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_text_similar_books"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_similar_books"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/book_horizontal_list"
+            android:visibility="gone"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

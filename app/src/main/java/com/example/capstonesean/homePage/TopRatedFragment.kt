@@ -61,15 +61,15 @@ class TopRatedFragment : Fragment() {
                 if (result != null) {
                     when (result) {
                         is Fetch.Loading -> {
-                            binding.progressBar.visibility = View.VISIBLE
+                            binding.shimmerLayout.visibility = View.VISIBLE
                         }
                         is Fetch.Success -> {
-                            binding.progressBar.visibility = View.GONE
+                            binding.shimmerLayout.visibility = View.GONE
                             val data = result.data
                             setBookList(data)
                         }
                         is Fetch.Error -> {
-                            binding.progressBar.visibility = View.GONE
+                            binding.shimmerLayout.visibility = View.GONE
                             Toast.makeText(
                                 activity,
                                 result.error,

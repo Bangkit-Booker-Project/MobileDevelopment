@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.capstonesean.data.Fetch
@@ -38,15 +39,16 @@ class BookLayoutActivity : AppCompatActivity() {
                 if (result != null) {
                     when (result) {
                         is Fetch.Loading -> {
-                            binding.progressBar.visibility = View.VISIBLE
+                            shimmybook()
                         }
                         is Fetch.Success -> {
-                            binding.progressBar.visibility = View.GONE
+                            binding.shimmerBook.visibility = View.GONE
+                            binding.bookLayout.visibility = View.VISIBLE
                             val data = result.data
                             setView(data)
                         }
                         is Fetch.Error -> {
-                            binding.progressBar.visibility = View.GONE
+                            binding.shimmerBook.visibility = View.GONE
                             Toast.makeText(
                                 this,
                                 result.error,
@@ -57,6 +59,10 @@ class BookLayoutActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    private fun shimmybook() {
+        binding.shimmerBook.visibility = View.VISIBLE
+        binding.tvBookTitle.isVisible = true
     }
 
     private fun setView(bookItem: BookItem){
@@ -83,15 +89,16 @@ class BookLayoutActivity : AppCompatActivity() {
                 if (result != null) {
                     when (result) {
                         is Fetch.Loading -> {
-                            binding.progressBar.visibility = View.VISIBLE
+                            binding.shimmerLayout.visibility = View.VISIBLE
                         }
                         is Fetch.Success -> {
-                            binding.progressBar.visibility = View.GONE
+                            binding.shimmerLayout.visibility = View.GONE
+                            binding.rvBookListHorizontal.visibility = View.VISIBLE
                             val data = result.data
                             setSimilarBooks(data)
                         }
                         is Fetch.Error -> {
-                            binding.progressBar.visibility = View.GONE
+                            binding.shimmerLayout.visibility = View.GONE
                             Toast.makeText(
                                 this,
                                 result.error,
@@ -110,6 +117,8 @@ class BookLayoutActivity : AppCompatActivity() {
         binding.rvBookListHorizontal.adapter = adapter
         binding.rvBookListHorizontal.layoutManager = layoutManager
     }
+
+
 
     companion object {
         const val TITLE = "title"
