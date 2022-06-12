@@ -15,4 +15,4 @@ Adding blueprints for the API and other server requirements.
 <h4>Week 5 </h4>
 Connecting the application with the API.<br>
 Adjusting the book layout according to the user data in the API.<br>
-Create a logo for the application.
+Creating a logo for the application.
