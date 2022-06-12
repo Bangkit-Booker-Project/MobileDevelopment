@@ -5,6 +5,7 @@ Finding similar apps to the one we are intending to built such as Goodreads, Lik
 <h4>Week 2 </h4>
 Creating and improving the layout in Figma.<br>
 Started to work on the splash screen, register, and login page in Android Studio.<br>
+Images: ![image](https://user-images.githubusercontent.com/76466511/173231693-ab2442d4-8e74-46b5-9fb3-86979cca3328.png)<br>
 Figma link: https://www.figma.com/file/wcbX2dt1EV2UEoCPvQATrD/Capstone-Bangkit?node-id=10%3A4165
 <h4>Week 3 </h4>
 Creating and improving the genre pick page, home page with its fragments, and a search feature.
