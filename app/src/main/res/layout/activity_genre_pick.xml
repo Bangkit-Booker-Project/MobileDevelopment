@@ -15,7 +15,7 @@
         android:fontFamily="@font/inter_semibold"
         android:gravity="center_horizontal"
         android:text="@string/pick_genre"
-        android:textColor="@color/black"
+        android:textColor="?attr/colorOnSecondary"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/preferred_genre"
         app:layout_constraintEnd_toEndOf="parent"

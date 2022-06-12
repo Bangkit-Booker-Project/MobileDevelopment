@@ -1,5 +1,6 @@
 package com.example.capstonesean.booklayout
 
+import android.R
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,7 @@ class BookLayoutActivity : AppCompatActivity() {
 
         getBookDetail()
         getSimilarBooks()
+
     }
 
     private fun getBookDetail(){
@@ -42,8 +44,7 @@ class BookLayoutActivity : AppCompatActivity() {
                             shimmybook()
                         }
                         is Fetch.Success -> {
-                            binding.shimmerBook.visibility = View.GONE
-                            binding.bookLayout.visibility = View.VISIBLE
+                            stopShimmy()
                             val data = result.data
                             setView(data)
                         }
@@ -62,7 +63,34 @@ class BookLayoutActivity : AppCompatActivity() {
     }
     private fun shimmybook() {
         binding.shimmerBook.visibility = View.VISIBLE
-        binding.tvBookTitle.isVisible = true
+        binding.tvBookTitle.visibility = View.INVISIBLE
+        binding.tvBookAuthor.visibility = View.INVISIBLE
+        binding.tvBookDesciption.visibility = View.INVISIBLE
+        binding.tvBookGenre.visibility = View.INVISIBLE
+        binding.tvBookRating.visibility = View.INVISIBLE
+        binding.tvBookPage.visibility = View.INVISIBLE
+        binding.tvRateThisBook.visibility = View.INVISIBLE
+        binding.tvTextSimilarBooks.visibility = View.INVISIBLE
+        binding.tvUserVote.visibility = View.INVISIBLE
+        binding.tvTextDescription.visibility = View.INVISIBLE
+        binding.tvTextGenre.visibility = View.INVISIBLE
+        binding.tvTextPage.visibility = View.INVISIBLE
+    }
+
+    private fun stopShimmy() {
+        binding.shimmerBook.visibility = View.GONE
+        binding.tvBookTitle.visibility = View.VISIBLE
+        binding.tvBookAuthor.visibility = View.VISIBLE
+        binding.tvBookDesciption.visibility = View.VISIBLE
+        binding.tvBookGenre.visibility = View.VISIBLE
+        binding.tvBookRating.visibility = View.VISIBLE
+        binding.tvBookPage.visibility = View.VISIBLE
+        binding.tvRateThisBook.visibility = View.VISIBLE
+        binding.tvTextSimilarBooks.visibility = View.VISIBLE
+        binding.tvUserVote.visibility = View.VISIBLE
+        binding.tvTextDescription.visibility = View.VISIBLE
+        binding.tvTextGenre.visibility = View.VISIBLE
+        binding.tvTextPage.visibility = View.VISIBLE
     }
 
     private fun setView(bookItem: BookItem){

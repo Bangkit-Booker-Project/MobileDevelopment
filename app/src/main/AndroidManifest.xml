@@ -11,15 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneSean">
-        <activity
-            android:name=".splashScreen.SplashActivity"
-            android:exported="false"
-            android:label="@string/title_activity_homepage"
-            android:theme="@style/Theme.CapstoneSean.NoActionBar"/>
 
         <activity
             android:name=".login.LoginActivity"
             android:exported="false" />
+
         <activity
             android:name=".signUp.SignUpActivity"
             android:exported="false" />
@@ -32,14 +28,18 @@
         <activity
             android:name=".settings.SettingsActivity"
             android:exported="false"/>
+        <activity
+            android:name=".booklayout.BookLayoutActivity"
+            android:exported="false"/>
 
         <activity
             android:name=".homePage.HomepageActivity"
-            android:exported="false" />
-
-            <activity
-                android:name=".booklayout.BookLayoutActivity"
-                android:exported="true">
+            android:exported="true"/>
+        <activity
+            android:name=".splashScreen.SplashActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.CapstoneSean.NoActionBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

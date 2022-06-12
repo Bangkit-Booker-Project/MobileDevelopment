@@ -31,7 +31,7 @@
             android:fontFamily="@font/inter_regular"
             android:padding="5dp"
             android:text="@string/book_title"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorSecondaryVariant"
             android:textSize="22sp"
             app:layout_constraintTop_toBottomOf="@+id/book_image" />
 
@@ -43,7 +43,7 @@
             android:fontFamily="@font/inter_extralight"
             android:padding="5dp"
             android:text="@string/book_author"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorSecondaryVariant"
             android:textSize="15sp"
             app:layout_constraintTop_toBottomOf="@+id/book_title" />
 
@@ -55,7 +55,7 @@
             android:fontFamily="@font/inter_regular"
             android:padding="5dp"
             android:text="@string/book_rating"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorSecondaryVariant"
             android:textSize="13sp"
             app:layout_constraintTop_toBottomOf="@+id/book_author" />
     </LinearLayout>

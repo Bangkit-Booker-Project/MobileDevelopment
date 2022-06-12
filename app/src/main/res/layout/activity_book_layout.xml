@@ -43,7 +43,7 @@
             android:gravity="center_horizontal"
             android:text="@string/book_author"
             android:textSize="24sp"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/iv_book_image"
             app:layout_constraintTop_toBottomOf="@+id/tv_book_title" />
 
@@ -55,7 +55,7 @@
             android:gravity="center_horizontal"
             android:text="@string/book_title"
             android:textSize="34sp"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/iv_book_image"
             app:layout_constraintTop_toTopOf="@+id/iv_book_image" />
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/book_rating"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="@+id/iv_book_image"
             app:layout_constraintHorizontal_bias="0.592"
             app:layout_constraintStart_toStartOf="@+id/iv_book_image"
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rate_this_book"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/tv_book_rating"
             app:layout_constraintStart_toStartOf="@+id/tv_book_author"
             app:layout_constraintTop_toTopOf="@+id/tv_book_rating" />
@@ -113,6 +113,7 @@
             android:layout_height="53dp"
             android:layout_marginTop="32dp"
             android:text="@string/get_this_book"
+            android:background="@drawable/green_secondary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_book_page" />
@@ -124,7 +125,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:text="@string/description"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -133,7 +134,7 @@
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="@string/book_desciption"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_text_description"
@@ -145,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/genre"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@+id/tv_text_description"
             app:layout_constraintTop_toBottomOf="@+id/tv_book_desciption" />
 
@@ -154,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/book_genre"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@+id/tv_text_genre"
             app:layout_constraintTop_toBottomOf="@+id/tv_text_genre" />
 
@@ -164,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/page"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@+id/tv_text_description"
             app:layout_constraintTop_toBottomOf="@+id/tv_book_genre" />
 
@@ -173,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/book_page"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@+id/tv_text_page"
             app:layout_constraintTop_toBottomOf="@+id/tv_text_page" />
 
@@ -184,7 +185,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="32dp"
             android:text="@string/similar_books"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@+id/tv_text_page"
             app:layout_constraintTop_toBottomOf="@+id/button_book_link" />
 
@@ -193,9 +194,10 @@
             android:layout_width="414dp"
             android:layout_height="180dp"
             android:orientation="horizontal"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_similar_books"
             tools:listitem="@layout/book_horizontal_list" />
 
         <com.facebook.shimmer.ShimmerFrameLayout
@@ -203,7 +205,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="200dp"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

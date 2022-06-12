@@ -4,9 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_book_layout.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_homepage.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_homepage.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_login.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_profile_page.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_register.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/book_horizontal_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/book_vertical_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/dropdown_item.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/fragment_for_you.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/fragment_my_books.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/fragment_top_rated.xml" value="0.22826086956521738" />

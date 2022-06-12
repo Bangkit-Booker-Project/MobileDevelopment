@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_green">#39874F</color>
     <color name="light_green">#5DB075</color>
+    <color name="grey">#666666</color>
     <color name="light_grey" tools:ignore="MissingDefaultResource">#E8E8E8</color>
 </resources>

@@ -38,7 +38,7 @@ data class BookItem(
 	val bookGenre1: String,
 
 	@field:SerializedName("bookRating")
-	val bookRating: Int,
+	val bookRating: Float,
 
 	@field:SerializedName("bookGenre3")
 	val bookGenre3: String,

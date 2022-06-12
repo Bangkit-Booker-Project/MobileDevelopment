@@ -8,35 +8,19 @@
 
     <ImageView
         android:id="@+id/booker_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="212dp"
         android:layout_centerVertical="true"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="263dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="259dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="260dp"
         android:contentDescription="@string/logo"
-        android:src="@drawable/ellipse_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/booker_text"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.example.capstonesean.splashScreen.LinearColor
-        android:id="@+id/booker_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="298dp"
-        android:fontFamily="@font/inter_black"
-        android:gravity="center_horizontal"
-        android:text="@string/booker"
-        android:textColor="@color/light_green"
-        android:textSize="36sp"
+        android:src="@drawable/logobooker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/booker_logo" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

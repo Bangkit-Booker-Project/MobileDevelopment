@@ -75,6 +75,7 @@
         android:layout_marginStart="12dp"
         android:text="My Books"
         android:textSize="20sp"
+        android:textColor="?attr/colorOnSecondary"
         app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/mybooks_button"
