@@ -8,11 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.GridLayout
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.capstonesean.R
 import com.example.capstonesean.booklayout.BookLayoutActivity
@@ -42,6 +39,30 @@ class TopRatedFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
        _binding = FragmentTopRatedBinding.inflate(inflater, container, false)
+        viewModel.getTopRatedBooks("Fiction").observe(requireActivity()) { result ->
+            if (result != null) {
+                when (result) {
+                    is Fetch.Loading -> {
+                        binding.rvTopRated.visibility = View.GONE
+                        binding.shimmerLayout.visibility = View.VISIBLE
+                    }
+                    is Fetch.Success -> {
+                        binding.rvTopRated.visibility = View.VISIBLE
+                        binding.shimmerLayout.visibility = View.GONE
+                        val data = result.data
+                        setBookList(data)
+                    }
+                    is Fetch.Error -> {
+                        binding.shimmerLayout.visibility = View.GONE
+                        Toast.makeText(
+                            activity,
+                            result.error,
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+            }
+        }
         return binding.root
     }
 
@@ -61,9 +82,11 @@ class TopRatedFragment : Fragment() {
                 if (result != null) {
                     when (result) {
                         is Fetch.Loading -> {
+                            binding.rvTopRated.visibility = View.GONE
                             binding.shimmerLayout.visibility = View.VISIBLE
                         }
                         is Fetch.Success -> {
+                            binding.rvTopRated.visibility = View.VISIBLE
                             binding.shimmerLayout.visibility = View.GONE
                             val data = result.data
                             setBookList(data)

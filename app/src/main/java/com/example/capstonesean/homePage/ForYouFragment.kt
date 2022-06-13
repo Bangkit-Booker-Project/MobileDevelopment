@@ -1,33 +1,33 @@
 package com.example.capstonesean.homePage
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.capstonesean.R
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.capstonesean.booklayout.BookLayoutActivity
+import com.example.capstonesean.data.Fetch
+import com.example.capstonesean.data.response.BookItem
+import com.example.capstonesean.databinding.FragmentForYouBinding
+import com.example.capstonesean.model.UserModel
+import com.example.capstonesean.model.UserPreferences
+import com.example.capstonesean.viewmodelfactory.BookModelFactory
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MyBooksFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ForYouFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private var _binding: FragmentForYouBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var userModel: UserModel
+    private lateinit var userPreferences: UserPreferences
+    private val viewModel: HomepageViewModel by viewModels {
+        BookModelFactory.getInstance()
     }
 
     override fun onCreateView(
@@ -35,26 +35,73 @@ class ForYouFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_for_you, container, false)
+        _binding = FragmentForYouBinding.inflate(inflater, container, false)
+
+        userPreferences = UserPreferences(requireActivity())
+        userModel = userPreferences.getUser()
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MyBooksFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MyBooksFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        binding.rvForYou.setLayoutManager(layoutManager)
+        binding.swiperefresh.setOnRefreshListener {
+            getData()
+        }
+
+        getData()
+    }
+
+    private fun getData(){
+        viewModel.getRecommendedBooks(userModel.token.toString()).observe(requireActivity()) { result ->
+            if (result != null) {
+                when (result) {
+                    is Fetch.Loading -> {
+                        binding.shimmerLayout.visibility = View.VISIBLE
+                        binding.rvForYou.visibility = View.GONE
+                    }
+                    is Fetch.Success -> {
+                        binding.shimmerLayout.visibility = View.GONE
+                        binding.rvForYou.visibility = View.VISIBLE
+                        binding.swiperefresh.isRefreshing = false
+                        val data = result.data
+                        setView(data)
+                    }
+                    is Fetch.Error -> {
+                        binding.shimmerLayout.visibility = View.GONE
+                        binding.swiperefresh.isRefreshing = false
+                        Toast.makeText(
+                            activity,
+                            result.error,
+                            Toast.LENGTH_LONG
+                        ).show()
+                        AlertDialog.Builder(requireActivity()).apply {
+                            setTitle("Error " + result.error)
+                            setPositiveButton("Retry") { _, _ ->
+                                getData()
+                            }
+                            create()
+                            show()
+                        }
+                    }
                 }
             }
+        }
+    }
+
+    private fun setView(bookItem: List<BookItem>){
+        val adapter = BookListAdapter(bookItem)
+        binding.rvForYou.adapter = adapter
+        Log.i("foryoudata", bookItem.toString())
+
+        adapter.setOnItemClickCallback(object : BookListAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: BookItem){
+                val toDetail = Intent(requireActivity(), BookLayoutActivity::class.java)
+                toDetail.putExtra(BookLayoutActivity.TITLE, data.bookTitle)
+                startActivity(toDetail)
+            }
+        })
     }
 }

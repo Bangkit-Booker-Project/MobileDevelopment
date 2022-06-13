@@ -5,5 +5,6 @@ import com.example.capstonesean.data.repository.UserRepository
 
 class SignUpViewModel(private val repository: UserRepository) : ViewModel() {
 
-    fun userRegister() = repository.userRegister()
+    fun userRegister(username: String, email: String, password: String) = repository.userRegister(username, email, password)
+    fun userLogin(email: String, password: String) = repository.userLogin(email, password)
 }

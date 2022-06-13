@@ -12,7 +12,7 @@
     <item
         android:id="@+id/menu_user"
         android:orderInCategory="2"
-        android:icon="@drawable/avatar_user"
+        android:icon="@drawable/ic_baseline_person"
         android:title="@string/user"
         app:showAsAction="always" />
 

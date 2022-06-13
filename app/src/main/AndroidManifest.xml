@@ -6,41 +6,43 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logobooker"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logobooker"
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneSean">
-
+        <activity
+            android:name=".editprofile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".homePage.HomepageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_homepage" />
         <activity
             android:name=".login.LoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".signUp.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".genrePick.GenrePickActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".profilepage.ProfilePageActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".settings.SettingsActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".booklayout.BookLayoutActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
-            android:name=".homePage.HomepageActivity"
-            android:exported="true"/>
+            android:name=".settings.SettingsActivity"
+            android:exported="false" />
         <activity
             android:name=".splashScreen.SplashActivity"
             android:exported="true"
-            android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.CapstoneSean.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

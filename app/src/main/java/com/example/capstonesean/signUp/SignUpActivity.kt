@@ -7,15 +7,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
-import android.view.Window
+import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import com.example.capstonesean.R
+import com.example.capstonesean.data.Fetch
+import com.example.capstonesean.data.response.LoginResult
 import com.example.capstonesean.databinding.ActivityRegisterBinding
-import com.example.capstonesean.databinding.ActivitySplashBinding
+import com.example.capstonesean.genrePick.GenrePickActivity
 import com.example.capstonesean.login.LoginActivity
+import com.example.capstonesean.model.UserModel
+import com.example.capstonesean.model.UserPreferences
+import com.example.capstonesean.viewmodelfactory.UserModelFactory
 
 class SignUpActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var userModel: UserModel
+    private lateinit var userPreferences: UserPreferences
+
+    val viewModel: SignUpViewModel by viewModels{
+        UserModelFactory.getInstance()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         supportActionBar?.hide()
@@ -24,12 +40,55 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
         playAnimation()
 
+        binding.progressBar.visibility = View.INVISIBLE
+
         setMyButtonEnable()
         binding.loginText.setOnClickListener {
             val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
             startActivity(intent)
         }
-        //binding.signUpButton.setOnClickListener { register() }
+
+        binding.signUpButton.setOnClickListener {
+            val username = binding.usernameText.text.toString()
+            val email = binding.emailText.text.toString()
+            val password = binding.passwordText.text.toString()
+
+            viewModel.userRegister(username, email, password).observe(this@SignUpActivity){ result ->
+                if (result != null) {
+                    when (result) {
+                        is Fetch.Loading -> {
+                            binding.progressBar.visibility = View.VISIBLE
+                        }
+                        is Fetch.Success -> {
+                            binding.progressBar.visibility = View.GONE
+                            val data = result.data
+                            Toast.makeText(
+                                this,
+                                "Status : $data",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            AlertDialog.Builder(this).apply {
+                                setTitle("Signup " + getString(R.string.success))
+                                setPositiveButton("OK") { _, _ ->
+                                    setUserData(email, password)
+                                }
+                                create()
+                                show()
+                            }
+                        }
+                        is Fetch.Error -> {
+                            binding.progressBar.visibility = View.GONE
+                            Toast.makeText(
+                                this,
+                                result.error,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }
+            }
+        }
+
 
         binding.usernameText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -75,6 +134,43 @@ class SignUpActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun setUserData(email: String, password: String){
+//        val email = binding.emailText.text.toString()
+//        val password = binding.passwordText.text.toString()
+
+        viewModel.userLogin(email, password).observe(this@SignUpActivity){ result ->
+            if (result != null) {
+                when (result) {
+                    is Fetch.Loading -> {
+                        binding.progressBar.visibility = View.VISIBLE
+                    }
+                    is Fetch.Success -> {
+                        binding.progressBar.visibility = View.GONE
+                        val data = result.data
+                        inputData(data)
+                    }
+                    is Fetch.Error -> {
+                        binding.progressBar.visibility = View.GONE
+                        Toast.makeText(
+                            this,
+                            "Password atau email salah",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+        }
+    }
+
+    private fun inputData(data: LoginResult){
+        val userPreferences = UserPreferences(this@SignUpActivity)
+        userPreferences.setUser(UserModel(username = data.username, token = data.token, isLogin = true))
+        Log.i("TOKEN SIGNUP", data.token)
+        val intent = Intent(this@SignUpActivity, GenrePickActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun playAnimation() {

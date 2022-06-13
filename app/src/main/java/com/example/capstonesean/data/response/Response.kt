@@ -14,6 +14,18 @@ data class BookArrayResponse(
 	val message: String
 )
 
+data class BookArrayResponse2(
+
+	@field:SerializedName("ratedBook")
+	val ratedBook: List<BookItem>,
+
+	@field:SerializedName("error")
+	val error: Boolean,
+
+	@field:SerializedName("message")
+	val message: String
+)
+
 data class BookDetailResponse(
 
 	@field:SerializedName("result")
@@ -70,6 +82,41 @@ data class BookItem(
 	@field:SerializedName("ISBN")
 	val iSBN: String,
 
+	@field:SerializedName("userRating")
+	val userRating: Float,
+
 	@field:SerializedName("bookTitle")
 	val bookTitle: String
+)
+
+data class SimpleResponse(
+	val error: Boolean,
+	val message: String
+)
+
+data class LoginResponse(
+
+	@field:SerializedName("result")
+	val result: LoginResult,
+
+	@field:SerializedName("error")
+	val error: Boolean,
+
+	@field:SerializedName("message")
+	val message: String
+)
+
+data class LoginResult(
+
+	@field:SerializedName("uid")
+	val uid: Int,
+
+	@field:SerializedName("email")
+	val email: String,
+
+	@field:SerializedName("token")
+	val token: String,
+
+	@field:SerializedName("username")
+	val username: String
 )

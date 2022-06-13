@@ -1,10 +1,7 @@
 package com.example.capstonesean.data.retrofit
 
-import com.example.capstonesean.data.response.BookArrayResponse
-import com.example.capstonesean.data.response.BookDetailResponse
-import com.example.capstonesean.data.response.BookItem
-import retrofit2.http.GET
-import retrofit2.http.Path
+import com.example.capstonesean.data.response.*
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -22,4 +19,50 @@ interface ApiService {
     suspend fun getTopGenre(
         @Path("genreName") genreName:String
     ): BookArrayResponse
+
+    @GET("search/{string}")
+    suspend fun bookSearch(
+        @Path("string") string: String
+    ): BookArrayResponse
+
+    @FormUrlEncoded
+    @POST("register")
+    suspend fun register(
+        @Field("username") username: String,
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): SimpleResponse
+
+    @FormUrlEncoded
+    @POST("login")
+    suspend fun login(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): LoginResponse
+
+    @FormUrlEncoded
+    @POST("resetPassword")
+    suspend fun resetPassword(
+        @Field("password") password: String,
+        @Query("token") token: String
+    ): SimpleResponse
+
+    @GET("recomendation")
+    suspend fun getRecommendation(
+        @Query("token") token:String
+    ): BookArrayResponse
+
+    @FormUrlEncoded
+    @POST("updateReadedBook")
+    suspend fun updateMyBooks(
+        @Field("ISBN") ISBN: String,
+        @Field("bookRating") bookRating: Float,
+        @Query("token") token: String
+    ): BookArrayResponse
+
+    @GET("getReadedBooks")
+    suspend fun getReadBooks(
+        @Query("token") token:String
+    ): BookArrayResponse
+
 }

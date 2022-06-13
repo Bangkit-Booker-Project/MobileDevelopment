@@ -23,7 +23,7 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:title="@string/booker"
+            app:title="@string/my_profile"
             app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -31,7 +31,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/green_secondary"
+        android:background="@drawable/linear_color"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,68 +41,21 @@
         android:id="@+id/setting_button"
         android:layout_width="307dp"
         android:layout_height="62dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mybooks_button"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username"
         app:srcCompat="@drawable/green_secondary" />
 
     <ImageView
         android:id="@+id/logout_button"
         android:layout_width="307dp"
         android:layout_height="62dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/setting_button"
         app:srcCompat="@drawable/green_secondary" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="45dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
-        app:layout_constraintStart_toStartOf="@+id/mybooks_button"
-        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
-        app:layout_constraintVertical_bias="0.48"
-        app:srcCompat="@drawable/ic_baseline_book" />
-
-    <TextView
-        android:id="@+id/tv_my_books5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="My Books"
-        android:textSize="20sp"
-        android:textColor="?attr/colorOnSecondary"
-        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
-        app:layout_constraintVertical_bias="0.488" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="45dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
-        app:layout_constraintStart_toStartOf="@+id/mybooks_button"
-        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_baseline_book" />
-
-    <TextView
-        android:id="@+id/tv_my_books4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="My Books"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/iv_profile_pic"
@@ -113,63 +66,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/sample_avatar" />
+        tools:srcCompat="@drawable/ic_baseline_person" />
 
     <TextView
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:text="User"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_profile_pic" />
-
-    <TextView
-        android:id="@+id/tv_user_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="user@gmal.com"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
-
-    <ImageView
-        android:id="@+id/mybooks_button"
-        android:layout_width="307dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_user_email"
-        app:srcCompat="@drawable/green_secondary" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="45dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
-        app:layout_constraintStart_toStartOf="@+id/mybooks_button"
-        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
-        app:layout_constraintVertical_bias="0.48"
-        app:srcCompat="@drawable/ic_baseline_book" />
-
-    <TextView
-        android:id="@+id/tv_my_books"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="My Books"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mybooks_button"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/mybooks_button"
-        app:layout_constraintVertical_bias="0.488" />
 
     <TextView
         android:id="@+id/tv_settings"
@@ -180,8 +90,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/setting_button"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toTopOf="@+id/setting_button"
-        app:layout_constraintVertical_bias="0.534" />
+        app:layout_constraintTop_toTopOf="@+id/setting_button" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -191,7 +100,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/setting_button"
         app:layout_constraintStart_toStartOf="@+id/setting_button"
         app:layout_constraintTop_toTopOf="@+id/setting_button"
-        app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/ic_baseline_settings" />
 
     <ImageView
@@ -202,7 +110,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/logout_button"
         app:layout_constraintStart_toStartOf="@+id/logout_button"
         app:layout_constraintTop_toTopOf="@+id/logout_button"
-        app:layout_constraintVertical_bias="0.44"
         app:srcCompat="@drawable/ic_baseline_logout" />
 
     <TextView
@@ -214,6 +121,5 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/logout_button"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toTopOf="@+id/logout_button"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintTop_toTopOf="@+id/logout_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

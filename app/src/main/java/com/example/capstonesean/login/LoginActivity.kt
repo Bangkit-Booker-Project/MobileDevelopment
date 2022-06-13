@@ -8,29 +8,68 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import com.example.capstonesean.R
+import com.example.capstonesean.data.Fetch
+import com.example.capstonesean.data.response.LoginResult
 import com.example.capstonesean.databinding.ActivityLoginBinding
-import com.example.capstonesean.databinding.ActivityRegisterBinding
-import com.example.capstonesean.genrePick.GenrePickActivity
+import com.example.capstonesean.homePage.HomepageActivity
+import com.example.capstonesean.model.UserModel
+import com.example.capstonesean.model.UserPreferences
 import com.example.capstonesean.signUp.SignUpActivity
+import com.example.capstonesean.viewmodelfactory.UserModelFactory
 
 class LoginActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var userModel: UserModel
+    private lateinit var userPreferences: UserPreferences
+
+    val viewModel: LoginViewModel by viewModels{
+        UserModelFactory.getInstance()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.progressBar.visibility = View.INVISIBLE
         setMyLoginButtonEnable()
         binding.signupText.setOnClickListener {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
             startActivity(intent)
         }
         binding.loginButton.setOnClickListener {
-            val intent = Intent(this@LoginActivity, GenrePickActivity::class.java)
-            startActivity(intent)
+            val email = binding.emailText.text.toString()
+            val password = binding.passwordText.text.toString()
+
+            viewModel.userLogin(email, password).observe(this@LoginActivity){ result ->
+                if (result != null) {
+                    when (result) {
+                        is Fetch.Loading -> {
+                            binding.progressBar.visibility = View.VISIBLE
+                        }
+                        is Fetch.Success -> {
+                            binding.progressBar.visibility = View.GONE
+                            val data = result.data
+                            inputData(data)
+                        }
+                        is Fetch.Error -> {
+                            binding.progressBar.visibility = View.GONE
+                            Toast.makeText(
+                                this,
+                                "Password atau email salah",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }
+            }
+
         }
 
         playAnimation()
@@ -64,6 +103,22 @@ class LoginActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun inputData(data: LoginResult){
+        val userPreferences = UserPreferences(this@LoginActivity)
+        userPreferences.setUser(UserModel(username = data.username, token = data.token, isLogin = true))
+        AlertDialog.Builder(this).apply {
+            setTitle("Login " + getString(R.string.success))
+            setPositiveButton("OK") { _, _ ->
+                val intent = Intent(this@LoginActivity, HomepageActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                finish()
+            }
+            create()
+            show()
+        }
     }
 
     private fun setMyLoginButtonEnable() {

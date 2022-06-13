@@ -8,8 +8,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
-import android.widget.SearchView
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +15,7 @@ import androidx.core.view.isVisible
 import com.example.capstonesean.R
 import com.example.capstonesean.databinding.ActivityHomepageBinding
 import com.example.capstonesean.profilepage.ProfilePageActivity
+import com.example.capstonesean.search.SearchActivity
 import com.example.capstonesean.viewmodelfactory.BookModelFactory
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -84,6 +83,12 @@ class HomepageActivity : AppCompatActivity(),
         if (query != null){
             binding.noResults.isVisible
         }
+//        Toast.makeText(this, query.toString(), Toast.LENGTH_SHORT).show()
+
+        val moveToSearch = Intent(this, SearchActivity::class.java)
+        moveToSearch.putExtra(SearchActivity.QUERY, query.toString())
+        startActivity(moveToSearch)
+
         return true
     }
 
@@ -93,7 +98,6 @@ class HomepageActivity : AppCompatActivity(),
         }
         return true
     }
-
     private fun playAnimation() {
         val appbar = ObjectAnimator.ofFloat(binding.appBarLayout, View.ALPHA, 1f).setDuration(1000)
         val toolbar = ObjectAnimator.ofFloat(binding.toolbar, View.ALPHA, 1f).setDuration(1000)

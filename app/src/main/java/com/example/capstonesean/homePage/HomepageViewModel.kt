@@ -5,9 +5,11 @@ import com.example.capstonesean.data.repository.BookRepository
 
 class HomepageViewModel (private val repository: BookRepository) : ViewModel() {
 
-    fun getRecommendedBooks() = repository.getRecommendedBook()
+    fun getRecommendedBooks(token: String) = repository.getRecommendedBook(token)
 
     fun getTopRatedBooks(genre: String) = repository.getTopRatedBook(genre)
 
-    fun getMyBooks() = repository.getMyBook()
+    fun getMyBooks(token: String) = repository.getReadBooks(token)
+
+    fun searchBooks(query: String) = repository.searchBook(query)
 }

@@ -26,7 +26,6 @@ class BookSimilarAdapter (private val bookItem: List<BookItem>): RecyclerView.Ad
         Glide.with(holder.binding.ivBookPicture.context)
             .load(bookItem[position].bookImage)
             .into(holder.binding.ivBookPicture)
-        holder.binding.tvBookTitleCard.text = bookItem[position].bookTitle
 
         holder.itemView.setOnClickListener {
             val moveToDetailBook = Intent(holder.itemView.context, BookLayoutActivity::class.java)

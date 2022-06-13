@@ -7,6 +7,7 @@ import com.example.capstonesean.data.repository.BookRepository
 import com.example.capstonesean.di.Injection
 import com.example.capstonesean.homePage.HomepageViewModel
 import com.example.capstonesean.login.LoginViewModel
+import com.example.capstonesean.search.SearchViewModel
 import com.example.capstonesean.signUp.SignUpViewModel
 
 class BookModelFactory private constructor(private val repository: BookRepository) :
@@ -20,6 +21,9 @@ class BookModelFactory private constructor(private val repository: BookRepositor
             }
             modelClass.isAssignableFrom(BookLayoutViewModel::class.java) -> {
                 BookLayoutViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(SearchViewModel::class.java) -> {
+                SearchViewModel(repository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

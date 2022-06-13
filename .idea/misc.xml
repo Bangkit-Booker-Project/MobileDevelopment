@@ -3,21 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_book_layout.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_homepage.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_login.xml" value="0.20153985507246377" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_profile_page.xml" value="0.20153985507246377" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_register.xml" value="0.20153985507246377" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/activity_splash.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/book_horizontal_list.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/book_vertical_list.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/dropdown_item.xml" value="0.20153985507246377" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/fragment_for_you.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/fragment_my_books.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/fragment_top_rated.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/shimmer_book_layout.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/shimmer_horizontal.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/3D Objects/MobileDevelopment-main/app/src/main/res/layout/shimmer_placeholder_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneSean/app/src/main/res/drawable/border_bg.xml" value="0.1695" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneSean/app/src/main/res/drawable/circular_button.xml" value="0.17" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneSean/app/src/main/res/drawable/circular_button_clicked.xml" value="0.17" />
@@ -41,6 +26,12 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneSean/app/src/main/res/layout/fragment_top_rated.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneSean/app/src/main/res/menu/action_bar.xml" value="0.4" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneSean/app/src/main/res/menu/nav_logout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/around_the_world.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/bg_button.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/bg_button_dark.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/bg_button_disable.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/bg_button_disable_dark.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/bg_button_outline.xml" value="0.1" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/border_bg.xml" value="0.2675" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/circular_button.xml" value="0.1035" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/circular_button_clicked.xml" value="0.1035" />
@@ -48,22 +39,40 @@
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/green_secondary.xml" value="0.1035" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/ic_baseline_book.xml" value="0.1035" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/ic_baseline_logout.xml" value="0.1035" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/ic_baseline_person.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/ic_baseline_star.xml" value="0.1" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.1035" />
-        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_book_layout.xml" value="0.2" />
-        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_homepage.xml" value="0.1" />
-        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_login.xml" value="0.21240942028985507" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/ic_image.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/line_active.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/drawable/linear_color.xml" value="0.1" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_book_layout.xml" value="0.536" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_detail.xml" value="0.1140625" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_edit_profile.xml" value="0.4" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_genre_pick.xml" value="0.2" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_homepage.xml" value="0.2" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_main.xml" value="0.1037037037037037" />
-        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_profile_page.xml" value="0.2" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_profile_page.xml" value="0.264" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_search.xml" value="0.264" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_settings.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/activity_splash.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/book_horizontal_list.xml" value="0.176" />
-        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/book_vertical_list.xml" value="0.4" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/book_simple_list.xml" value="0.6" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/book_vertical_list.xml" value="0.72" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/dropdown_item.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/fragment_for_you.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/fragment_my_books.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/fragment_top_rated.xml" value="0.21240942028985507" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/item_loading.xml" value="0.1140625" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/item_story.xml" value="0.1140625" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/item_story_loading.xml" value="0.1140625" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/shimmer_book_layout.xml" value="0.21195652173913043" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/shimmer_horizontal.xml" value="0.21195652173913043" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/layout/shimmer_placeholder_layout.xml" value="0.21195652173913043" />
         <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/menu/action_bar.xml" value="0.25625" />
+        <entry key="..\:/Users/Yuda/AndroidStudioProjects/MobileDevelopment/app/src/main/res/menu/nav_logout.xml" value="0.1140625" />
       </map>
     </option>
   </component>

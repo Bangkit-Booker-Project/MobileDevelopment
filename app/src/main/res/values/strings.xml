@@ -15,16 +15,17 @@
     <string name="pick_genre">Pick Your Genre</string>
     <string name="preferred_genre">Pick your preferred genre</string>
     <string-array name="genre">
-        <item>All</item>
         <item>Fiction</item>
         <item>Historical</item>
         <item>Fantasy</item>
         <item>Classics</item>
-        <item>Sci - Fi</item>
-        <item>Non - Fiction</item>
+        <item>Science</item>
+        <item>ScienceFiction</item>
+        <item>Nonfiction</item>
         <item>Romance</item>
         <item>Mystery</item>
         <item>Horror</item>
+        <item>Philosophy</item>
     </string-array>
     <string name="genre1">FICTION</string>
     <string name="genre2">HISTORICAL</string>
@@ -71,4 +72,19 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="no_result">No Results</string>
     <string name="copyright">\@2022 Booker</string>
+    <string name="success">Success</string>
+    <string name="search_result">%1$d Result Found For "%2$s"</string>
+    <string name="content_photo">book_image</string>
+    <string name="search_hint">Search Book</string>
+    <string name="logout">Logout</string>
+    <string name="book_detail">Book Detail</string>
+    <string name="user_vote">Your Vote</string>
+    <string name="my_profile">My Profile</string>
+    <string name="appbar">AppBar</string>
+    <string name="image">image</string>
+    <string name="vote">Vote</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="old_password">Old Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="you_have_not_rated_any_books_yet">You have not rated any books yet</string>
 </resources>
